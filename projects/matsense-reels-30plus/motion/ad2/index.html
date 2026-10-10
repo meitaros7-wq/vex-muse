@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>Matsense Reel 2 - Twice a day</title>
+    <script src="assets/js/gsap.min.js"></script>
+    <link rel="stylesheet" href="assets/kit.css" />
+    <style>
+      .half { position: absolute; left: 70px; right: 70px; }
+      #them { top: 230px; } #you { top: 1010px; }
+      .half .big { font-weight: 800; font-size: 124px; line-height: 1; letter-spacing: -3px; text-transform: uppercase; margin-top: 14px; }
+      .grid7 { display: flex; justify-content: space-between; margin-top: 44px; }
+      .col { width: 120px; display: flex; flex-direction: column; align-items: center; gap: 14px; }
+      .col .f { width: 104px; height: 104px; border-radius: 50%; display: grid; place-items: center; background: rgba(255, 255, 255, 0.06); color: rgba(255, 255, 255, 0.22); }
+      .col .f svg { width: 60px; height: 60px; }
+      .col .d { font-weight: 800; font-size: 28px; color: var(--ink-subtle); }
+      .clock { font-family: "JetBrains Mono", monospace; font-weight: 700; font-size: 92px; margin-top: 46px; color: var(--ink-muted); }
+      .clock small { font-family: "Manrope"; font-weight: 800; font-size: 40px; letter-spacing: 0; margin-left: 24px; color: var(--ink-subtle); }
+      .divider { position: absolute; left: 70px; right: 70px; top: 960px; height: 2px; background: rgba(255, 255, 255, 0.12); }
+      .kin { position: absolute; left: 60px; right: 60px; top: 640px; text-align: center; font-weight: 800; text-transform: uppercase; letter-spacing: -4px; line-height: 1; }
+      .kin .l1 { position: relative; display: inline-block; font-size: 150px; }
+      .kin .l1 .strike { position: absolute; left: -10px; right: -10px; top: 52%; height: 16px; border-radius: 8px; background: var(--danger); transform-origin: 0 50%; }
+      .kin .l2 { display: block; font-size: 170px; margin-top: 40px; color: var(--streak-core); }
+      .kin .sub { display: block; font-size: 52px; letter-spacing: 0; margin-top: 30px; color: var(--ink-muted); text-transform: none; }
+      .app.alt { opacity: 0; }
+      #h6 { top: 560px; text-align: center; left: 40px; right: 40px; font-size: 128px; }
+      #h6 .l { display: block; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="ad2" data-start="0" data-width="1080" data-height="1920" data-duration="25.7">
+      <video id="vbg1" class="clip full" src="assets/video/v_b_020.mp4" data-start="0" data-duration="7.3" data-media-start="0" data-track-index="1" muted></video>
+      <video id="vbg3" class="clip full" src="assets/video/v_b_406.mp4" data-start="7.3" data-duration="3.4" data-media-start="0.5" data-track-index="1" muted></video>
+      <video id="vbg6" class="clip full" src="assets/video/v_b_352.mp4" data-start="19.55" data-duration="3.7" data-media-start="0" data-track-index="1" muted></video>
+      <section id="s-dim" class="clip" data-start="0" data-duration="7.3" data-track-index="2" style="position:absolute;inset:0">
+        <div class="tint" id="dim" style="opacity:0"></div><div class="shade-top" id="dimtop" style="height:1300px"></div>
+      </section>
+      <section id="s-dim6" class="clip" data-start="19.55" data-duration="3.7" data-track-index="2" style="position:absolute;inset:0">
+        <div class="tint" style="opacity:0.6"></div><div class="shade-top"></div>
+      </section>
+
+      <!-- 1-2. them vs you -->
+      <section id="s1" class="clip" data-start="0" data-duration="7.3" data-track-index="3" style="position:absolute;inset:0">
+        <div class="half" id="them"><div class="kicker">The 22-year-olds</div><div class="big">Twice a <span class="hot">day.</span></div><div class="grid7" id="g-them"></div></div>
+        <div class="divider" id="divider"></div>
+        <div class="half" id="you"><div class="kicker">You</div><div class="big">Twice a <span class="hot">week.</span></div><div class="grid7" id="g-you"></div>
+          <div class="clock" id="clock">21:40<small id="kids">after the kids are asleep</small></div></div>
+      </section>
+      <!-- 3. out-think -->
+      <section id="s3" class="clip" data-start="7.3" data-duration="3.4" data-track-index="3" style="position:absolute;inset:0">
+        <div class="shade-top" style="height:1920px;background:rgba(10,9,30,0.55)"></div>
+        <div class="kin"><span class="l1" id="ot">Out-train<i class="strike" id="strike"></i></span><span class="l2" id="oth">Out-think</span></div>
+      </section>
+
+      <!-- 4-5. the app -->
+      <div class="phone" id="phone" data-layout-allow-overflow data-layout-allow-overlap><div class="screen">
+        <div class="pv"><video id="pv1" class="clip" src="assets/video/p_b_352.mp4" data-start="10.6" data-duration="1.6" data-media-start="1.0" data-track-index="5" muted></video></div>
+        <div class="island"></div><div class="app" id="app"></div><div class="app alt" id="app2"></div><div class="app alt" id="app3"></div></div></div>
+
+      <!-- 6. zero wasted mat time -->
+      <section id="s6" class="clip" data-start="19.55" data-duration="3.7" data-track-index="4" style="position:absolute;inset:0">
+        <div class="headline" id="h6"><span class="l" id="h6a">Less mat time.</span><span class="l hot" id="h6b">Zero wasted.</span></div>
+      </section>
+
+      <div class="capfade" id="capfade"></div>
+      <div class="caps" id="caps" data-layout-allow-overlap></div>
+
+      <section id="s-end" class="clip" data-start="23.15" data-duration="2.55" data-track-index="6" style="position:absolute;inset:0">
+        <div class="end"><div class="logo" id="logo"></div><div class="tag" id="tag">Out-think them.</div><div class="url" id="url">matsense.co</div></div>
+      </section>
+      <audio id="mix" src="assets/audio/mix_ad2.wav" data-start="0" data-duration="25.7" data-track-index="9"></audio>
+    </div>
+
+    <script src="assets/kit.js"></script>
+    <script src="assets/data/words_ad2.js"></script>
+    <script>
+      const D = ["M", "T", "W", "T", "F", "S", "S"];
+      const col = (i, n, pre) => `<div class="col">${Array.from({ length: n }, (_, k) => `<div class="f" id="${pre}${i}-${k}">${K.icon("flame", { fill: true })}</div>`).join("")}<div class="d">${D[i]}</div></div>`;
+      document.getElementById("g-them").innerHTML = D.map((_, i) => col(i, 2, "t")).join("");
+      document.getElementById("g-you").innerHTML = D.map((_, i) => col(i, 1, "y")).join("");
+
+      document.getElementById("app").innerHTML = K.matchScreen({
+        id: "m", title: "Meitar vs Amit", sub: "23 Sep · Gi · 10:44", a: "Meitar", b: "Amit", duration: 644, tc: "5:51", toSort: "3 to sort",
+        events: [{ t: 23, side: "b", fam: "pull" }, { t: 264, side: "b", fam: "sweep", key: 1 }, { t: 358, side: "a", fam: "sweep", key: 1 }, { t: 412, side: "b", fam: "sweep", key: 1 }],
+        rows: [{ t: 264, side: "b", fam: "sweep", name: "Sweep", who: "Amit", pts: "2 pts" }, { t: 358, side: "a", fam: "sweep", name: "Sweep", who: "Meitar", pts: "2 pts" },
+               { t: 412, side: "b", fam: "sweep", name: "Sweep", who: "Amit", pts: "2 pts" }],
+      });
+      const AREAS = [
+        { h: "Sweeping from open guard", times: "5:58", p: "You broke the grip, came up on the leg and finished on top." },
+        { h: "Base on top of the open guard", times: "4:24 · 6:52", p: "Swept twice. Both times your weight was too far forward." },
+        { h: "Staying on top after the sweep", times: "5:58 → 6:52", p: "You came up on top at 5:58 and were swept back 54 seconds later." },
+      ];
+      document.getElementById("app2").innerHTML = K.breakdownScreen({
+        id: "b", match: "Meitar vs Amit", result: "Amit was ahead on the events recorded: 4-2 in points.", sel: 0, areas: [AREAS[0]],
+      });
+      document.getElementById("app3").innerHTML = `<div class="pad" style="padding-top:64px"><div class="topbar"><div style="flex:1"><div class="t-sub" style="margin:0">Your week</div>
+          <div class="t-title" style="font-size:24px">Hey Meitar, what are we sharpening today?</div></div></div>
+        <div class="label" style="margin-top:22px">This week's plan</div>
+        ${K.weekStrip({ id: "wk", on: [1, 3], times: { 1: "20:30", 3: "21:00" } })}
+        <div class="label" style="margin-top:20px">Task</div>
+        ${K.taskCard({ id: "tk", n: 1, name: "Stay on top after the sweep", pc: 0, notes: 2, sess: 0 })}
+        <div class="card" style="margin-top:10px;padding:12px 14px;display:flex;align-items:center;gap:10px">
+          <span style="width:20px;height:20px;color:var(--streak)">${K.icon("flame", { fill: true })}</span>
+          <span style="font-weight:800;font-size:13.5px">2 trainings planned around it</span></div></div>`;
+      document.getElementById("logo").innerHTML = K.MARK("#ff8a1f") + '<span class="word">Matsense</span>';
+
+      const tl = gsap.timeline({ paused: true });
+      const ws = WORDS;
+      const W = (w, from) => ws[ws.findIndex((x, j) => j >= (from || 0) && x.text.toLowerCase().startsWith(w))].start;
+
+      // 1. the 22-year-olds: fourteen flames
+      tl.fromTo("#them", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, 0.05);
+      for (let i = 0; i < 7; i++) for (let k = 0; k < 2; k++) {
+        const t = 0.45 + (i * 2 + k) * 0.11;
+        tl.to(`#t${i}-${k}`, { color: "#ff8a1f", backgroundColor: "rgba(255,138,31,0.18)", duration: 0.08 }, t);
+        tl.fromTo(`#t${i}-${k}`, { scale: 0.6 }, { scale: 1, duration: 0.25, ease: "back.out(3)" }, t);
+      }
+      tl.to("#dim", { opacity: 0.82, duration: 0.5 }, 2.9);
+      tl.fromTo("#vbg1", { scale: 1.0 }, { scale: 1.08, duration: 7.3, ease: "none" }, 0);
+      tl.fromTo("#divider", { scaleX: 0 }, { scaleX: 1, duration: 0.4, ease: "power2.inOut" }, 2.7);
+      // 2. you: two
+      tl.fromTo("#you", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, 3.05);
+      tl.to("#them", { opacity: 0.35, duration: 0.4 }, 3.1);
+      [1, 3].forEach((i, j) => {
+        const t = W("week") + 0.05 + j * 0.25;
+        tl.to(`#y${i}-0`, { color: "#ff8a1f", backgroundColor: "rgba(255,138,31,0.18)", duration: 0.08 }, t);
+        tl.fromTo(`#y${i}-0`, { scale: 0.6 }, { scale: 1, duration: 0.3, ease: "back.out(3)" }, t);
+      });
+      tl.fromTo("#clock", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, W("after"));
+      tl.fromTo("#kids", { opacity: 0 }, { opacity: 1, duration: 0.3 }, W("kids") - 0.2);
+      // 3. out-train / out-think
+      tl.fromTo("#ot", { opacity: 0, scale: 1.25 }, { opacity: 1, scale: 1, duration: 0.25, ease: "power3.out" }, W("out-train") - 0.08);
+      tl.fromTo("#strike", { scaleX: 0 }, { scaleX: 1, duration: 0.28, ease: "power2.inOut" }, W("them") + 0.05);
+      tl.to("#ot", { opacity: 0.4, duration: 0.2 }, W("them") + 0.3);
+      tl.fromTo("#oth", { opacity: 0, y: 80, scale: 0.9 }, { opacity: 1, y: 0, scale: 1, duration: 0.3, ease: "back.out(2)" }, W("out-think") - 0.06);
+      tl.fromTo("#vbg3", { scale: 1.0 }, { scale: 1.1, duration: 3.4, ease: "none" }, 7.3);
+
+      // 4. upload -> breakdown
+      const tUp = W("upload");
+      tl.set("#phone", { opacity: 0 }, 0);
+      tl.fromTo("#phone", { opacity: 1, y: 1500 }, { y: 0, duration: 0.6, ease: "power3.out" }, tUp - 0.1);
+      tl.set(["#capfade"], { opacity: 0 }, 0);
+      tl.to("#capfade", { opacity: 1, duration: 0.3 }, tUp);
+      tl.to("#capfade", { opacity: 0, duration: 0.2 }, 19.5);
+      const tBreak = W("breaks");
+      tl.to("#app2", { opacity: 1, duration: 0.3 }, tBreak - 0.1);
+      tl.to("#app", { opacity: 0, duration: 0.3 }, tBreak - 0.1);
+      tl.to("#phone .pv", { opacity: 0, duration: 0.3 }, tBreak - 0.1);
+      const seg = (i, t) => {
+        [0, 1, 2].forEach((j) => tl.to(`#b-seg-${j}`, { backgroundColor: j === i ? "#ffffff" : "rgba(255,255,255,0)", color: j === i ? "#16143a" : "#b9b6e0", duration: 0.12 }, t));
+      };
+      const card = document.getElementById("b-area-0");
+      const H = card.querySelector(".h"), Tm = card.querySelector(".times"), Pp = card.querySelector(".p");
+      const swap = (i, t) => {
+        tl.to(card, { opacity: 0, x: -30, duration: 0.12 }, t - 0.12);
+        tl.set(H, { textContent: AREAS[i].h }, t); tl.set(Tm, { textContent: AREAS[i].times }, t); tl.set(Pp, { textContent: AREAS[i].p }, t);
+        tl.fromTo(card, { opacity: 0, x: 40 }, { opacity: 1, x: 0, duration: 0.22, ease: "power3.out" }, t);
+      };
+      tl.fromTo(card, { opacity: 0, y: 30, x: 0 }, { opacity: 1, y: 0, x: 0, duration: 0.25 }, W("working") - 0.1);
+      seg(0, W("working") - 0.1);
+      seg(1, W("leaking") - 0.1); swap(1, W("leaking") - 0.05);
+      seg(2, W("drill") - 0.1); swap(2, W("drill") - 0.05);
+      tl.fromTo("#b-train-0", { scale: 1 }, { scale: 1.12, duration: 0.18, yoyo: true, repeat: 3, ease: "power1.inOut" }, W("drill") + 0.3);
+      // 5. builds your week
+      const tWeek = W("then");
+      tl.to("#app3", { opacity: 1, duration: 0.3 }, tWeek - 0.15);
+      tl.to("#app2", { opacity: 0, duration: 0.3 }, tWeek - 0.15);
+      [1, 3].forEach((i, j) => tl.fromTo(`#wk-d${i} .fl`, { scale: 0.4 }, { scale: 1, duration: 0.3, ease: "back.out(3)" }, W("week", 40) + j * 0.2));
+      tl.fromTo("#tk", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.3 }, W("around") - 0.1);
+      tl.to("#phone", { y: 1500, duration: 0.45, ease: "power3.in" }, 19.15);
+
+      // 6. less mat time, zero wasted
+      tl.fromTo("#h6a", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.25, ease: "power3.out" }, W("less") - 0.05);
+      tl.fromTo("#h6b", { opacity: 0, scale: 1.3 }, { opacity: 1, scale: 1, duration: 0.25, ease: "power3.out" }, W("zero") - 0.05);
+      tl.fromTo("#vbg6", { scale: 1.1 }, { scale: 1.0, duration: 3.7, ease: "none" }, 19.55);
+
+      K.captions(tl, document.getElementById("caps"), ws, { skip: [[0, 10.6], [19.5, 99]], hot: ["working", "leaking", "drill", "week"] });
+
+      tl.fromTo("#logo", { opacity: 0, scale: 0.85 }, { opacity: 1, scale: 1, duration: 0.45, ease: "back.out(1.7)" }, 23.2);
+      tl.fromTo("#logo .dot", { scale: 0, transformOrigin: "50% 50%" }, { scale: 1, duration: 0.3, ease: "back.out(3)" }, 23.45);
+      tl.fromTo("#tag", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 23.6);
+      tl.fromTo("#url", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 24.0);
+      window.__timelines["ad2"] = tl;
+    </script>
+  </body>
+</html>

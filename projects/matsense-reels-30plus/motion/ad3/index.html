@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>Matsense Reel 3 - Forty students</title>
+    <script src="assets/js/gsap.min.js"></script>
+    <link rel="stylesheet" href="assets/kit.css" />
+    <style>
+      #grid { position: absolute; left: 18px; top: 150px; width: 1044px; height: 1674px; display: grid;
+        grid-template-columns: repeat(5, 204px); grid-auto-rows: 204px; gap: 6px; }
+      .tile { position: relative; width: 204px; height: 204px; border-radius: 14px; overflow: hidden; background: #000; }
+      .tile img { width: 100%; height: 100%; object-fit: cover; display: block; }
+      .tile .dimmer { position: absolute; inset: 0; background: rgba(10, 9, 30, 0.55); }
+      #you-tile { z-index: 3; box-shadow: 0 0 0 5px var(--streak-core), 0 0 50px rgba(255, 197, 94, 0.7); }
+      #you-tile .lab { position: absolute; left: 10px; top: 10px; background: var(--streak-core); color: var(--on-streak); font-weight: 800;
+        font-size: 24px; padding: 4px 12px; border-radius: 14px; }
+      #eye { position: absolute; width: 214px; height: 214px; margin: -5px 0 0 -5px; border-radius: 18px; border: 5px solid #fff;
+        box-shadow: 0 0 40px rgba(255, 255, 255, 0.5); z-index: 4; }
+      #hookband { position: absolute; left: 0; right: 0; top: 0; height: 760px;
+        background: linear-gradient(180deg, rgba(14, 13, 36, 0.96) 0%, rgba(14, 13, 36, 0.85) 60%, rgba(14, 13, 36, 0) 100%); }
+      #h1 { top: 250px; } #h1 .l { display: block; }
+      .watch { position: absolute; left: 0; right: 0; top: 760px; text-align: center; }
+      .watch .num { font-family: "JetBrains Mono", monospace; font-weight: 700; font-size: 230px; letter-spacing: -6px; text-shadow: 0 10px 60px rgba(0, 0, 0, 0.7); }
+      .watch .of { font-weight: 800; font-size: 54px; color: var(--ink-muted); margin-top: 6px; text-shadow: 0 4px 30px rgba(0, 0, 0, 0.8); }
+      .math { position: absolute; left: 40px; right: 40px; top: 640px; text-align: center; font-weight: 800; }
+      .math .a { font-family: "JetBrains Mono", monospace; font-size: 150px; letter-spacing: -6px; display: block; }
+      .math .b { font-size: 190px; letter-spacing: -6px; display: block; color: var(--streak-core); line-height: 1; margin-top: 30px; }
+      .math .c { font-size: 50px; color: var(--ink-muted); display: block; margin-top: 26px; }
+      .tagx { display: inline-block; font-size: 10px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; border-radius: 6px; padding: 3px 8px; margin-bottom: 6px; }
+      #lesson { position: absolute; left: 70px; right: 70px; top: 640px; border-radius: 44px; padding: 52px 56px; background: rgba(26, 24, 64, 0.94);
+        border: 2px solid rgba(255, 255, 255, 0.12); box-shadow: 0 40px 120px rgba(0, 0, 0, 0.6); }
+      #lesson .k { font-weight: 800; font-size: 28px; letter-spacing: 4px; text-transform: uppercase; color: var(--ink-muted); }
+      #lesson .t { font-weight: 800; font-size: 64px; letter-spacing: -1.5px; margin-top: 8px; }
+      #lesson .it { display: flex; gap: 22px; align-items: center; margin-top: 30px; font-weight: 800; font-size: 40px; }
+      #lesson .it b { width: 64px; height: 64px; border-radius: 20px; display: grid; place-items: center; font-size: 32px; flex: none; }
+      #hour { display: flex; gap: 8px; margin-top: 46px; height: 26px; }
+      #hour i { flex: 1; border-radius: 13px; display: block; transform-origin: 0 50%; }
+      #hourlab { display: flex; justify-content: space-between; margin-top: 14px; font-family: "JetBrains Mono", monospace; font-size: 26px; color: var(--ink-muted); }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="ad3" data-start="0" data-width="1080" data-height="1920" data-duration="26.9">
+      <!-- 1. forty students -->
+      <section id="s1" class="clip" data-start="0" data-duration="3.95" data-track-index="2" style="position:absolute;inset:0">
+        <div id="grid"></div><div id="eye"></div><div id="hookband"></div>
+        <div class="headline" id="h1"><span class="l" id="h1a">Your coach has <span class="hot">40</span> students.</span><span class="l" id="h1b" style="margin-top:20px;font-size:84px;color:var(--ink-muted)">One pair of eyes.</span></div>
+      </section>
+      <!-- 2. ninety seconds -->
+      <video id="v2" class="clip full" src="assets/video/v_b_258.mp4" data-start="3.75" data-duration="3.0" data-media-start="2.0" data-track-index="1" muted></video>
+      <section id="s2" class="clip" data-start="3.75" data-duration="3.0" data-track-index="3" style="position:absolute;inset:0">
+        <div class="shade-top"></div><div class="tint" style="opacity:0.35"></div>
+        <div class="watch"><div class="num" id="sw">0:00</div><div class="of">of your coach's eyes</div></div>
+      </section>
+      <!-- 3. the math -->
+      <section id="s3" class="clip" data-start="6.75" data-duration="2.3" data-track-index="3" style="position:absolute;inset:0">
+        <div class="math"><span class="a" id="ma">40 × 6 min</span><span class="b" id="mb">= 4 hours</span><span class="c" id="mc">for one tournament</span></div>
+      </section>
+
+      <!-- 4-5. the app -->
+      <div class="phone" id="phone" data-layout-allow-overflow data-layout-allow-overlap><div class="screen">
+        <div class="pv"><video id="pv1" class="clip" src="assets/video/p_b_ff150.mp4" data-start="9.1" data-duration="4.3" data-media-start="0" data-track-index="5" muted></video></div>
+        <div class="island"></div><div class="app" id="app"></div><div class="app" id="app2" style="opacity:0"></div></div></div>
+
+      <!-- 6. bring it to your next private -->
+      <video id="v6" class="clip full" src="assets/video/v_b_406.mp4" data-start="19.75" data-duration="4.2" data-media-start="3.0" data-track-index="1" muted></video>
+      <section id="s6" class="clip" data-start="19.75" data-duration="4.2" data-track-index="4" style="position:absolute;inset:0">
+        <div class="tint" style="opacity:0.55"></div>
+        <div id="lesson"><div class="k">Private lesson · Thu 19:00</div><div class="t">Bring your breakdown</div>
+          <div class="it"><b style="background:var(--task-1)">1</b>Staying on top after the sweep</div>
+          <div class="it"><b style="background:var(--task-2)">2</b>Base on top of the open guard</div>
+          <div class="it"><b style="background:var(--task-3)">3</b>Keep: the open-guard sweep</div>
+          <div id="hour"><i id="hr1" style="background:var(--task-1-mark)"></i><i id="hr2" style="background:var(--task-2-mark)"></i><i id="hr3" style="background:var(--task-3-mark)"></i></div>
+          <div id="hourlab"><span>0 min</span><span>60 min</span></div></div>
+      </section>
+
+      <div class="capfade" id="capfade"></div>
+      <div class="caps" id="caps" data-layout-allow-overlap></div>
+
+      <section id="s-end" class="clip" data-start="24.3" data-duration="2.6" data-track-index="6" style="position:absolute;inset:0">
+        <div class="end"><div class="logo" id="logo"></div><div class="tag" id="tag">Your match, fully watched.</div><div class="url" id="url">matsense.co</div></div>
+      </section>
+      <audio id="mix" src="assets/audio/mix_ad3.wav" data-start="0" data-duration="26.9" data-track-index="9"></audio>
+    </div>
+
+    <script src="assets/kit.js"></script>
+    <script src="assets/data/words_ad3.js"></script>
+    <script>
+      // the wall: forty matches, alternating the two in the app; "you" is one of them
+      const YOU = 22;
+      const order = Array.from({ length: 40 }, (_, i) => (i % 2 ? 20 + (i >> 1) : i >> 1));
+      document.getElementById("grid").innerHTML = order.map((k, i) =>
+        `<div class="tile" ${i === YOU ? 'id="you-tile"' : `id="tile-${i}"`}><img src="assets/img/tiles/t${String(k).padStart(2, "0")}.jpg" alt="">${i === YOU ? '<span class="lab">YOU</span>' : '<i class="dimmer"></i>'}</div>`).join("");
+
+      const EV = [{ t: 23, side: "b", fam: "pull" }, { t: 264, side: "b", fam: "sweep", key: 1 }, { t: 358, side: "a", fam: "sweep", key: 1 }, { t: 412, side: "b", fam: "sweep", key: 1 }];
+      document.getElementById("app").innerHTML = K.matchScreen({
+        id: "m", title: "Meitar vs Amit", sub: "23 Sep · Gi · 10:44", a: "Meitar", b: "Amit", duration: 644, tc: "0:00", toSort: "3 to sort", events: EV,
+        rows: [{ t: 23, side: "b", fam: "pull", name: "Guard pull", who: "Amit", pts: "0 pts" }, { t: 264, side: "b", fam: "sweep", name: "Sweep", who: "Amit", pts: "2 pts" },
+               { t: 358, side: "a", fam: "sweep", name: "Sweep", who: "Meitar", pts: "2 pts" }, { t: 412, side: "b", fam: "sweep", name: "Sweep", who: "Amit", pts: "2 pts" }],
+      });
+      const AR = [
+        { tag: "Strong", c: "#45c47a", h: "Sweeping from open guard", times: "5:58", p: "You broke the grip, came up on the leg and finished on top." },
+        { tag: "Weak", c: "#ff7b7b", h: "Base on top of the open guard", times: "4:24 · 6:52", p: "Swept twice. Both times your weight was too far forward." },
+        { tag: "Improve", c: "#aaa4ff", h: "Staying on top after the sweep", times: "5:58 → 6:52", p: "You came up on top at 5:58 and were swept back 54 seconds later." },
+      ];
+      document.getElementById("app2").innerHTML = `<div class="pad">
+        <div class="topbar"><div class="circle">${K.icon("back")}</div><div style="flex:1"><div class="t-sub" style="margin:0">Meitar vs Amit</div><div class="t-title">Fight breakdown</div></div></div>
+        <div class="card" style="margin-top:14px;padding:12px 14px;font-weight:800;font-size:14px;line-height:1.35">Amit was ahead on the events recorded: 4-2 in points.</div>
+        ${AR.map((a, i) => `<div class="area-card card" id="ar-${i}"><span class="tagx" style="color:${a.c};background:${a.c}22">${a.tag}</span>
+          <div class="h">${a.h}</div><div class="times">${a.times}</div><div class="p">${a.p}</div></div>`).join("")}</div>`;
+      document.getElementById("logo").innerHTML = K.MARK("#ff8a1f") + '<span class="word">Matsense</span>';
+
+      const tl = gsap.timeline({ paused: true });
+      const ws = WORDS;
+      const W = (w, from) => ws[ws.findIndex((x, j) => j >= (from || 0) && x.text.toLowerCase().startsWith(w))].start;
+
+      // 1. the wall and one pair of eyes
+      tl.fromTo("#grid", { scale: 1.12 }, { scale: 1.0, duration: 3.9, ease: "power1.out" }, 0);
+      tl.fromTo("#h1a", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.25, ease: "power3.out" }, 0.1);
+      tl.fromTo("#h1b", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.25, ease: "power3.out" }, W("one") - 0.05);
+      const r = K.rng(11);
+      const hops = [];
+      for (let i = 0; i < 9; i++) hops.push(Math.floor(r() * 40));
+      hops[hops.length - 1] = YOU;
+      const pos = (i) => ({ x: 18 + (i % 5) * 210, y: 150 + Math.floor(i / 5) * 210 });
+      tl.set("#eye", { opacity: 0, x: pos(0).x, y: pos(0).y }, 0);
+      hops.forEach((h, j) => {
+        const t = W("one") + j * 0.18;
+        tl.set("#eye", { opacity: 1 }, t);
+        tl.to("#eye", { x: pos(h).x, y: pos(h).y, duration: 0.1, ease: "power2.out" }, t);
+      });
+      // 2. your match: ninety seconds of them
+      tl.to("#hookband", { opacity: 0, duration: 0.3 }, 3.4);
+      tl.to("#eye", { opacity: 0, duration: 0.1 }, 3.3);
+      tl.to("#h1", { opacity: 0, duration: 0.2 }, 3.45);
+      tl.set("#you-tile", { transformOrigin: "50% 50%" }, 0);
+      tl.to("#you-tile", { scale: 5.6, x: 540 - (pos(YOU).x + 102), y: 960 - (pos(YOU).y + 102), duration: 0.45, ease: "power3.in" }, 3.3);
+      tl.fromTo("#v2", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 3.75);
+      const tSw = W("ninety") - 0.6;
+      for (let s = 0; s <= 90; s += 3) tl.set("#sw", { textContent: K.mmss(s) }, tSw + (s / 90) * 1.0);
+      tl.fromTo(".watch", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.25 }, tSw - 0.1);
+      // 3. the math
+      tl.fromTo("#ma", { opacity: 0, scale: 1.2 }, { opacity: 1, scale: 1, duration: 0.25, ease: "power3.out" }, 6.8);
+      tl.fromTo("#mb", { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 0.3, ease: "back.out(2)" }, W("that's") - 0.05);
+      tl.fromTo("#mc", { opacity: 0 }, { opacity: 1, duration: 0.3 }, W("math") );
+
+      // 4. Matsense watches all of it
+      tl.set("#phone", { opacity: 0 }, 0);
+      tl.fromTo("#phone", { opacity: 1, y: 1500 }, { y: 0, duration: 0.55, ease: "power3.out" }, 8.95);
+      tl.set("#capfade", { opacity: 0 }, 0);
+      tl.to("#capfade", { opacity: 1, duration: 0.3 }, 9.0);
+      tl.to("#capfade", { opacity: 0, duration: 0.2 }, 19.6);
+      const T0 = 9.1, TD = 4.3, AREA = 286;
+      for (let s = 0; s <= 644; s += 8) tl.set("#m-tc", { textContent: K.mmss(s) }, T0 + (s / 644) * TD);
+      tl.fromTo("#m-head", { x: 0 }, { x: AREA, duration: TD, ease: "none" }, T0);
+      tl.fromTo("#m-prog", { scaleX: 0 }, { scaleX: 1, duration: TD, ease: "none" }, T0);
+      EV.forEach((e, i) => {
+        tl.set(`#m-tick-${i}`, { opacity: 0 }, 0);
+        tl.fromTo(`#m-tick-${i}`, { opacity: 0, scaleY: 0, transformOrigin: "50% 100%" }, { opacity: 1, scaleY: 1, duration: 0.2, ease: "back.out(3)" }, T0 + (e.t / 644) * TD);
+      });
+      [0, 1, 2, 3].forEach((i) => {
+        tl.set(`#m-row-${i}`, { opacity: 0 }, 0);
+        tl.fromTo(`#m-row-${i}`, { opacity: 0, x: 60 }, { opacity: 1, x: 0, duration: 0.25, ease: "power3.out" }, W("exchange") + i * 0.28);
+      });
+      // 5. the breakdown in plain words
+      const tB = W("breakdown");
+      tl.to("#app2", { opacity: 1, duration: 0.3 }, tB - 0.2);
+      tl.to(["#app", "#phone .pv"], { opacity: 0, duration: 0.3 }, tB - 0.2);
+      [W("strong"), W("weak"), W("fix")].forEach((t, i) => {
+        tl.set(`#ar-${i}`, { opacity: 0 }, 0);
+        tl.fromTo(`#ar-${i}`, { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, t - 0.1);
+      });
+      tl.to("#phone", { y: 1500, duration: 0.4, ease: "power3.in" }, 19.45);
+
+      // 6. your next private
+      tl.fromTo("#lesson", { opacity: 0, y: 80, scale: 0.94 }, { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "back.out(1.5)" }, 19.8);
+      document.querySelectorAll("#lesson .it").forEach((el, i) => tl.fromTo(el, { opacity: 0, x: 40 }, { opacity: 1, x: 0, duration: 0.25 }, 20.2 + i * 0.2));
+      ["#hr1", "#hr2", "#hr3"].forEach((h, i) => tl.fromTo(h, { scaleX: 0 }, { scaleX: 1, duration: 0.45, ease: "power2.out" }, W("watch", 40) + i * 0.4));
+      tl.fromTo("#v6", { scale: 1.0 }, { scale: 1.08, duration: 4.2, ease: "none" }, 19.75);
+
+      K.captions(tl, document.getElementById("caps"), ws, { skip: [[0, 3.8], [24.3, 99]], hot: ["ninety", "strong", "weak", "fix", "private"] });
+
+      tl.fromTo("#logo", { opacity: 0, scale: 0.85 }, { opacity: 1, scale: 1, duration: 0.45, ease: "back.out(1.7)" }, 24.35);
+      tl.fromTo("#logo .dot", { scale: 0, transformOrigin: "50% 50%" }, { scale: 1, duration: 0.3, ease: "back.out(3)" }, 24.6);
+      tl.fromTo("#tag", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 24.8);
+      tl.fromTo("#url", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 25.2);
+      window.__timelines["ad3"] = tl;
+    </script>
+  </body>
+</html>

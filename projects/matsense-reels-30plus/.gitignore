@@ -1,0 +1,11 @@
+# generated media stays out of git (the sources rebuild it; see tools/)
+renders/
+motion/*/renders/
+motion/*/snapshots/
+motion/*/.hyperframes/
+motion/reels/assets/video/
+motion/reels/assets/audio/
+motion/reels/assets/img/tiles/
+audio/*.wav
+audio/sfx/*.mp3
+node_modules/

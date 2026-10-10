@@ -1,0 +1,237 @@
+{
+ "ad1": {
+  "duration": 22.245,
+  "lines": [
+   {
+    "i": 0,
+    "text": "You lost by one advantage.",
+    "start": 0.15,
+    "end": 1.949
+   },
+   {
+    "i": 1,
+    "text": "Which one?",
+    "start": 2.499,
+    "end": 3.262
+   },
+   {
+    "i": 2,
+    "text": "You don't know. Nobody remembers their own match. Adrenaline wipes it.",
+    "start": 4.412,
+    "end": 8.871
+   },
+   {
+    "i": 3,
+    "text": "Matsense watches it for you. Every pass, every sweep, every almost. Marked on the timeline.",
+    "start": 9.321,
+    "end": 15.6
+   },
+   {
+    "i": 4,
+    "text": "Including the one that cost you.",
+    "start": 16.05,
+    "end": 17.717
+   },
+   {
+    "i": 5,
+    "text": "Tap it. Watch it. Fix it.",
+    "start": 18.167,
+    "end": 19.772
+   },
+   {
+    "i": 6,
+    "text": "Matsense. Know what happened.",
+    "start": 20.372,
+    "end": 21.945
+   }
+  ]
+ },
+ "ad2": {
+  "duration": 24.321,
+  "lines": [
+   {
+    "i": 0,
+    "text": "The twenty-two-year-olds train twice a day.",
+    "start": 0.15,
+    "end": 2.61
+   },
+   {
+    "i": 1,
+    "text": "You train twice a week. After work. If the kids are asleep.",
+    "start": 3.16,
+    "end": 6.93
+   },
+   {
+    "i": 2,
+    "text": "You can't out-train them. So out-think them.",
+    "start": 7.38,
+    "end": 10.261
+   },
+   {
+    "i": 3,
+    "text": "Upload your match. Matsense breaks it down: what's working, what's leaking, what to drill this week.",
+    "start": 10.711,
+    "end": 16.984
+   },
+   {
+    "i": 4,
+    "text": "Then it builds your week around it.",
+    "start": 17.434,
+    "end": 19.243
+   },
+   {
+    "i": 5,
+    "text": "Less mat time. Zero wasted mat time.",
+    "start": 19.693,
+    "end": 22.582
+   },
+   {
+    "i": 6,
+    "text": "Matsense.",
+    "start": 23.182,
+    "end": 24.021
+   }
+  ]
+ },
+ "ad3": {
+  "duration": 25.599,
+  "lines": [
+   {
+    "i": 0,
+    "text": "Your coach has forty students. One pair of eyes.",
+    "start": 0.15,
+    "end": 3.321
+   },
+   {
+    "i": 1,
+    "text": "Your match got about ninety seconds of them.",
+    "start": 3.871,
+    "end": 6.471
+   },
+   {
+    "i": 2,
+    "text": "Not their fault. That's the math.",
+    "start": 6.921,
+    "end": 8.671
+   },
+   {
+    "i": 3,
+    "text": "Matsense watches all six minutes. Every exchange, timed. A breakdown in plain words: your strong areas, your weak areas, what to fix next.",
+    "start": 9.121,
+    "end": 19.541
+   },
+   {
+    "i": 4,
+    "text": "Bring it to your next private. Watch how different that hour feels.",
+    "start": 19.991,
+    "end": 23.86
+   },
+   {
+    "i": 5,
+    "text": "Matsense.",
+    "start": 24.46,
+    "end": 25.299
+   }
+  ]
+ },
+ "ad4": {
+  "duration": 22.003,
+  "lines": [
+   {
+    "i": 0,
+    "text": "This is how you watch your own match.",
+    "start": 0.15,
+    "end": 2.35
+   },
+   {
+    "i": 1,
+    "text": "Scrub. Wait. Scrub.",
+    "start": 2.9,
+    "end": 4.278
+   },
+   {
+    "i": 2,
+    "text": "Six minutes of fight. Forty minutes of staring.",
+    "start": 4.728,
+    "end": 7.626
+   },
+   {
+    "i": 3,
+    "text": "And you still don't know where it turned.",
+    "start": 8.076,
+    "end": 9.99
+   },
+   {
+    "i": 4,
+    "text": "Matsense skips the staring. It marks every moment that mattered, yours and your opponent's.",
+    "start": 10.44,
+    "end": 16.204
+   },
+   {
+    "i": 5,
+    "text": "One tap, and you're there.",
+    "start": 16.654,
+    "end": 18.015
+   },
+   {
+    "i": 6,
+    "text": "Your lunch break is enough now.",
+    "start": 18.465,
+    "end": 20.264
+   },
+   {
+    "i": 7,
+    "text": "Matsense.",
+    "start": 20.864,
+    "end": 21.703
+   }
+  ]
+ },
+ "ad5": {
+  "duration": 24.146,
+  "lines": [
+   {
+    "i": 0,
+    "text": "Same pass. Three tournaments.",
+    "start": 0.15,
+    "end": 2.075
+   },
+   {
+    "i": 1,
+    "text": "That's not bad luck. That's a pattern.",
+    "start": 2.625,
+    "end": 4.962
+   },
+   {
+    "i": 2,
+    "text": "Patterns hide across months of matches. Matsense finds them.",
+    "start": 5.412,
+    "end": 9.361
+   },
+   {
+    "i": 3,
+    "text": "Every match goes into your library, and the same moments are filed together.",
+    "start": 9.811,
+    "end": 14.549
+   },
+   {
+    "i": 4,
+    "text": "Turn the pattern into a task. Train it. Count down to your next competition.",
+    "start": 14.998,
+    "end": 20.003
+   },
+   {
+    "i": 5,
+    "text": "Then let them try that pass again.",
+    "start": 20.453,
+    "end": 22.407
+   },
+   {
+    "i": 6,
+    "text": "Matsense.",
+    "start": 23.007,
+    "end": 23.846
+   }
+  ]
+ }
+}
