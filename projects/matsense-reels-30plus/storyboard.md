@@ -39,8 +39,8 @@ task -> the plan sheet fills the week -> "Zero wasted mat time": the streak flam
 
 ## Ad 3: "Forty students"
 0-2 s hook: a grid of 40 match thumbnails, one is yours, and a stopwatch reads 1:30.
-"That's the math": 40 x 6 min = 4 hours, written as numbers -> Matsense plays all six
-minutes of match B at speed with the exchanges ticking onto the timeline -> the breakdown in
+"That's the math": 40 matches, 1 coach, about 90 seconds each -> Matsense plays all of
+match B at speed with the exchanges ticking onto the timeline -> the breakdown in
 words -> a coach and student over the phone, shot as an over-the-shoulder still from the
 match footage of the mat edge -> end card.
 

@@ -9,6 +9,8 @@ def trim(a, thr=0.008):
     idx=np.where(np.abs(a)>thr)[0]
     return a[max(idx[0]-240,0):idx[-1]+480] if len(idx) else a
 meta={}
+import os
+PIN=json.load(open(os.environ['PIN'])) if os.environ.get('PIN') else {}
 for block in ads:
     head,*rest=block.strip().split('\n')
     n=int(head.split()[1])
@@ -24,12 +26,15 @@ for block in ads:
         txt=l.lstrip('.').strip()
         if pause_before:
             pieces.append(np.zeros(int(0.7*SR))); t+=0.7
+        old=PIN.get(f'ad{n}',{}).get('lines',[])
+        if i < len(old) and old[i]['start'] > t:   # keep every line where it was before an edit
+            pad=old[i]['start']-t; pieces.append(np.zeros(int(pad*SR))); t+=int(pad*SR)/SR
         a,sr=k.create(txt.replace('Matsense','Mat-sense'), voice=voice, speed=speed, lang='en-us'); assert sr==SR
         a=trim(a)
         info.append({'i':i,'text':txt,'start':round(t,3),'end':round(t+len(a)/SR,3)})
         pieces.append(a); t+=len(a)/SR
         gap = 0.55 if i==0 else (0.45 if txt.endswith('?') or txt.endswith('.') else 0.3)
-        if i==len(j)-2: gap=0.6   # breath before the brand line
+        pass  # (the brand line at the end was dropped on 2026-10-10)
         if i<len(j)-1: pieces.append(np.zeros(int(gap*SR))); t+=gap
     pieces.append(np.zeros(int(0.3*SR)))
     y=np.concatenate(pieces).astype(np.float32)
