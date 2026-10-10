@@ -51,7 +51,7 @@ time collapses (the match strip folds into only its coloured events) -> one tap 
 sweep at 4:22 -> "Your lunch break is enough": a 12:47 clock -> end card.
 
 ## Ad 5: "Same pass. Three tournaments."
-0-2 s hook: three vertical panels side by side, the same passing moment playing in sync (matches
+0-2 s hook: three vertical panels side by side, three passing moments playing in sync, all taken from the two matches in the app (Meitar: work with what is there) (matches
 A and B at their pass and dangerous-position moments, plus one more cut), each stamped with a
 tournament name and date. "That's a pattern": the three panels slide into one Library folder ->
 "Turn the pattern into a task": Train -> a task card -> the next-competition countdown tile
