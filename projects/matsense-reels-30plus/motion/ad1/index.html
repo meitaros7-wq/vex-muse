@@ -46,9 +46,9 @@
       <section id="s1" class="clip" data-start="0" data-duration="4.35" data-track-index="3" style="position:absolute;inset:0">
         <div class="headline" id="h1"><span class="w">You</span> <span class="w">lost</span> <span class="w">by</span> <span class="w">one</span> <span class="w hot">advantage.</span></div>
         <div class="board" id="board">
-          <div class="r"><span class="flag" style="background:#fff"></span><span class="nm">MEITAR</span><span class="pt">2</span>
+          <div class="r"><span class="flag" style="background:#fff"></span><span class="nm">ATHLETE A</span><span class="pt">2</span>
             <span class="sm"><b>0</b><span>ADV</span></span><span class="sm"><b>0</b><span>PEN</span></span></div>
-          <div class="r"><span class="flag" style="background:#4a52c4"></span><span class="nm">AMIT</span><span class="pt">2</span>
+          <div class="r"><span class="flag" style="background:#4a52c4"></span><span class="nm">ATHLETE B</span><span class="pt">2</span>
             <span class="sm" id="adv-hot"><i id="adv-ring"></i><b id="adv-n" style="color:var(--danger)">1</b><span>ADV</span></span><span class="sm"><b>0</b><span>PEN</span></span></div>
         </div>
         <div class="headline" id="h2" style="top:300px;opacity:0"><span class="w">Which</span> <span class="w hot">one?</span></div>
@@ -90,12 +90,12 @@
         { t: 538, side: "b", fam: "sweepatt", key: 1 },
       ];
       const rows = [
-        { t: 335, side: "b", fam: "pass", name: "Guard pass", who: "Amit", pts: "3 pts" },
-        { t: 262, side: "b", fam: "sweep", name: "Sweep", who: "Amit", pts: "2 pts" },
-        { t: 538, side: "b", fam: "sweepatt", name: "Sweep attempt", who: "Amit", pts: "Adv" },
+        { t: 335, side: "b", fam: "pass", name: "Guard pass", who: "Athlete B", pts: "3 pts" },
+        { t: 262, side: "b", fam: "sweep", name: "Sweep", who: "Athlete B", pts: "2 pts" },
+        { t: 538, side: "b", fam: "sweepatt", name: "Sweep attempt", who: "Athlete B", pts: "Adv" },
       ];
       document.getElementById("app").innerHTML = K.matchScreen({
-        id: "m", title: "Meitar vs Amit", sub: "1 Oct · No-gi · 11:25", a: "Meitar", b: "Amit", duration: 685, events: E, rows, tc: "4:16", toSort: "7 to sort",
+        id: "m", title: "Athlete A vs Athlete B", sub: "1 Oct · No-gi · 11:25", a: "Athlete A", b: "Athlete B", duration: 685, events: E, rows, tc: "4:16", toSort: "7 to sort",
       });
       document.getElementById("fixcard").innerHTML =
         '<div style="transform:scale(2.3);transform-origin:50% 0;width:390px;margin:0 auto">' +

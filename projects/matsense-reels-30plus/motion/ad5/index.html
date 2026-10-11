@@ -49,9 +49,9 @@
 
       <!-- 3. months of matches: three strips, the orange tick in each -->
       <section id="s3" class="clip" data-start="5.4" data-duration="4.45" data-track-index="3" style="position:absolute;inset:0">
-        <div class="mrow" id="mr0" style="top:680px"><span class="t">March</span><span class="s">vs Amit · 11:25</span><div class="st" id="st0"><i class="ln"></i></div></div>
-        <div class="mrow" id="mr1" style="top:950px"><span class="t">June</span><span class="s">vs Amit · 11:25</span><div class="st" id="st1"><i class="ln"></i></div></div>
-        <div class="mrow" id="mr2" style="top:1220px"><span class="t">September</span><span class="s">vs Amit · 10:44</span><div class="st" id="st2"><i class="ln"></i></div></div>
+        <div class="mrow" id="mr0" style="top:680px"><span class="t">March</span><span class="s">vs Athlete B · 11:25</span><div class="st" id="st0"><i class="ln"></i></div></div>
+        <div class="mrow" id="mr1" style="top:950px"><span class="t">June</span><span class="s">vs Athlete B · 11:25</span><div class="st" id="st1"><i class="ln"></i></div></div>
+        <div class="mrow" id="mr2" style="top:1220px"><span class="t">September</span><span class="s">vs Athlete B · 10:44</span><div class="st" id="st2"><i class="ln"></i></div></div>
       </section>
 
       <!-- 4-5. the app: library, task, countdown -->
@@ -88,7 +88,7 @@
           `<i class="tk ${side}" id="tk${k}-${i}" style="left:${(100 * t) / m.dur}%;height:${i === m.hit ? 44 : 26}px;background:var(--ev-${K.FAM[fam]}-mark)"></i>`).join(""));
       });
       const tile = (n) => `assets/img/tiles/t${String(n).padStart(2, "0")}.jpg`;
-      const ROWS = [["Guard pass", "Sep · 5:52 · vs Amit", 6], ["Guard pass", "Jun · 1:42 · vs Amit", 21], ["Guard pass", "Mar · 5:35 · vs Amit", 28]];
+      const ROWS = [["Guard pass", "Sep · 5:52 · vs Athlete B", 6], ["Guard pass", "Jun · 1:42 · vs Athlete B", 21], ["Guard pass", "Mar · 5:35 · vs Athlete B", 28]];
       document.getElementById("app").innerHTML = `<div class="pad">
         <div class="topbar"><div class="t-title" style="font-size:26px;flex:1">Library</div><div class="circle">${K.icon("plus")}</div></div>
         <div class="tabs3"><span>Tasks</span><span>Notes</span><span class="sel">Folders</span></div>

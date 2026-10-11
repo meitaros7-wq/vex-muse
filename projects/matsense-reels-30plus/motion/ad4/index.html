@@ -90,9 +90,9 @@
         { t: 262, side: "b", fam: "sweep", key: 1 }, { t: 335, side: "b", fam: "pass", key: 1 }, { t: 460, side: "b", fam: "sub" }, { t: 538, side: "b", fam: "sweepatt", key: 1 },
       ];
       document.getElementById("app").innerHTML = K.matchScreen({
-        id: "m", title: "Meitar vs Amit", sub: "1 Oct · No-gi · 11:25", a: "Meitar", b: "Amit", duration: DUR, events: EV, tc: "0:00", toSort: "7 to sort",
-        rows: [{ t: 102, side: "b", fam: "near", name: "Dangerous pass", who: "Amit", pts: "Adv" }, { t: 255, side: "a", fam: "sub", name: "Submission attempt", who: "Meitar", pts: "Adv" },
-               { t: 262, side: "b", fam: "sweep", name: "Sweep", who: "Amit", pts: "2 pts" }, { t: 335, side: "b", fam: "pass", name: "Guard pass", who: "Amit", pts: "3 pts" }],
+        id: "m", title: "Athlete A vs Athlete B", sub: "1 Oct · No-gi · 11:25", a: "Athlete A", b: "Athlete B", duration: DUR, events: EV, tc: "0:00", toSort: "7 to sort",
+        rows: [{ t: 102, side: "b", fam: "near", name: "Dangerous pass", who: "Athlete B", pts: "Adv" }, { t: 255, side: "a", fam: "sub", name: "Submission attempt", who: "Athlete A", pts: "Adv" },
+               { t: 262, side: "b", fam: "sweep", name: "Sweep", who: "Athlete B", pts: "2 pts" }, { t: 335, side: "b", fam: "pass", name: "Guard pass", who: "Athlete B", pts: "3 pts" }],
       });
       // the dead-time bar: grey stretches and the moments, which close up into a row
       const BW = 940, px = BW / DUR, bar = document.getElementById("bar");

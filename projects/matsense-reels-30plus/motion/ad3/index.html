@@ -94,9 +94,9 @@
 
       const EV = [{ t: 23, side: "b", fam: "pull" }, { t: 264, side: "b", fam: "sweep", key: 1 }, { t: 358, side: "a", fam: "sweep", key: 1 }, { t: 412, side: "b", fam: "sweep", key: 1 }];
       document.getElementById("app").innerHTML = K.matchScreen({
-        id: "m", title: "Meitar vs Amit", sub: "23 Sep · Gi · 10:44", a: "Meitar", b: "Amit", duration: 644, tc: "0:00", toSort: "3 to sort", events: EV,
-        rows: [{ t: 23, side: "b", fam: "pull", name: "Guard pull", who: "Amit", pts: "0 pts" }, { t: 264, side: "b", fam: "sweep", name: "Sweep", who: "Amit", pts: "2 pts" },
-               { t: 358, side: "a", fam: "sweep", name: "Sweep", who: "Meitar", pts: "2 pts" }, { t: 412, side: "b", fam: "sweep", name: "Sweep", who: "Amit", pts: "2 pts" }],
+        id: "m", title: "Athlete A vs Athlete B", sub: "23 Sep · Gi · 10:44", a: "Athlete A", b: "Athlete B", duration: 644, tc: "0:00", toSort: "3 to sort", events: EV,
+        rows: [{ t: 23, side: "b", fam: "pull", name: "Guard pull", who: "Athlete B", pts: "0 pts" }, { t: 264, side: "b", fam: "sweep", name: "Sweep", who: "Athlete B", pts: "2 pts" },
+               { t: 358, side: "a", fam: "sweep", name: "Sweep", who: "Athlete A", pts: "2 pts" }, { t: 412, side: "b", fam: "sweep", name: "Sweep", who: "Athlete B", pts: "2 pts" }],
       });
       const AR = [
         { tag: "Strong", c: "#45c47a", h: "Sweeping from open guard", times: "5:58", p: "You broke the grip, came up on the leg and finished on top." },
@@ -104,8 +104,8 @@
         { tag: "Improve", c: "#aaa4ff", h: "Staying on top after the sweep", times: "5:58 → 6:52", p: "You came up on top at 5:58 and were swept back 54 seconds later." },
       ];
       document.getElementById("app2").innerHTML = `<div class="pad">
-        <div class="topbar"><div class="circle">${K.icon("back")}</div><div style="flex:1"><div class="t-sub" style="margin:0">Meitar vs Amit</div><div class="t-title">Fight breakdown</div></div></div>
-        <div class="card" style="margin-top:14px;padding:12px 14px;font-weight:800;font-size:14px;line-height:1.35">Amit was ahead on the events recorded: 4-2 in points.</div>
+        <div class="topbar"><div class="circle">${K.icon("back")}</div><div style="flex:1"><div class="t-sub" style="margin:0">Athlete A vs Athlete B</div><div class="t-title">Fight breakdown</div></div></div>
+        <div class="card" style="margin-top:14px;padding:12px 14px;font-weight:800;font-size:14px;line-height:1.35">Athlete B was ahead on the events recorded: 4-2 in points.</div>
         ${AR.map((a, i) => `<div class="area-card card" id="ar-${i}"><span class="tagx" style="color:${a.c};background:${a.c}22">${a.tag}</span>
           <div class="h">${a.h}</div><div class="times">${a.times}</div><div class="p">${a.p}</div></div>`).join("")}</div>`;
       document.getElementById("logo").innerHTML = K.MARK("#ff8a1f") + '<span class="word">Matsense</span>';

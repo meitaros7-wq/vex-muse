@@ -81,10 +81,10 @@
       document.getElementById("g-you").innerHTML = D.map((_, i) => col(i, 1, "y")).join("");
 
       document.getElementById("app").innerHTML = K.matchScreen({
-        id: "m", title: "Meitar vs Amit", sub: "23 Sep · Gi · 10:44", a: "Meitar", b: "Amit", duration: 644, tc: "5:51", toSort: "3 to sort",
+        id: "m", title: "Athlete A vs Athlete B", sub: "23 Sep · Gi · 10:44", a: "Athlete A", b: "Athlete B", duration: 644, tc: "5:51", toSort: "3 to sort",
         events: [{ t: 23, side: "b", fam: "pull" }, { t: 264, side: "b", fam: "sweep", key: 1 }, { t: 358, side: "a", fam: "sweep", key: 1 }, { t: 412, side: "b", fam: "sweep", key: 1 }],
-        rows: [{ t: 264, side: "b", fam: "sweep", name: "Sweep", who: "Amit", pts: "2 pts" }, { t: 358, side: "a", fam: "sweep", name: "Sweep", who: "Meitar", pts: "2 pts" },
-               { t: 412, side: "b", fam: "sweep", name: "Sweep", who: "Amit", pts: "2 pts" }],
+        rows: [{ t: 264, side: "b", fam: "sweep", name: "Sweep", who: "Athlete B", pts: "2 pts" }, { t: 358, side: "a", fam: "sweep", name: "Sweep", who: "Athlete A", pts: "2 pts" },
+               { t: 412, side: "b", fam: "sweep", name: "Sweep", who: "Athlete B", pts: "2 pts" }],
       });
       const AREAS = [
         { h: "Sweeping from open guard", times: "5:58", p: "You broke the grip, came up on the leg and finished on top." },
@@ -92,10 +92,10 @@
         { h: "Staying on top after the sweep", times: "5:58 → 6:52", p: "You came up on top at 5:58 and were swept back 54 seconds later." },
       ];
       document.getElementById("app2").innerHTML = K.breakdownScreen({
-        id: "b", match: "Meitar vs Amit", result: "Amit was ahead on the events recorded: 4-2 in points.", sel: 0, areas: [AREAS[0]],
+        id: "b", match: "Athlete A vs Athlete B", result: "Athlete B was ahead on the events recorded: 4-2 in points.", sel: 0, areas: [AREAS[0]],
       });
       document.getElementById("app3").innerHTML = `<div class="pad" style="padding-top:64px"><div class="topbar"><div style="flex:1"><div class="t-sub" style="margin:0">Your week</div>
-          <div class="t-title" style="font-size:24px">Hey Meitar, what are we sharpening today?</div></div></div>
+          <div class="t-title" style="font-size:24px">Hey, what are we sharpening today?</div></div></div>
         <div class="label" style="margin-top:22px">This week's plan</div>
         ${K.weekStrip({ id: "wk", on: [1, 3], times: { 1: "20:30", 3: "21:00" } })}
         <div class="label" style="margin-top:20px">Task</div>
