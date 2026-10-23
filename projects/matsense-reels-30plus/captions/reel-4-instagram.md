@@ -1,6 +1,6 @@
 # Reel 4 "Forty minutes of staring": Instagram caption (2026-10-23)
 
-You don't need another hour on the mat. You need the 4 minutes of your match that actually mattered.
+You don't need another hour on the mat. You need the moments of your match that actually mattered.
 
 Most of us film every match, then scrub back and forth for 40 minutes and still can't say where it turned.
 
